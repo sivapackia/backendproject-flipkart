@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Home</title>
+    <style>
+        a{
+            text-decoration: none;
+            font-weight: 700;
+        }
+        li{
+            list-style-type: none;
+        }
+        .containers{
+            width: 95%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body style="background-color: #8080802b;">
+    {% extends "Navbar.html" %}
+    {% block content %}
+    <!-- section 1 -->
+    <section class="my-3">
+        <div class="container-fluid">
+            <div class="col-12 col-sm-12 col-lg-12 col-md-12">
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/1600/270/image/e8afba7feffa58f9.jpg?q=20" width="100%">
+            </div>
+        </div>
+    </section>
+    <!-- section 2 -->
+    <section class="my-5"> 
+        <div class="containers card p-3">
+            <div class="col-12 col-sm-12 col-lg-12 col-md-12 text">
+                <h2 style="font-weight: 800;font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;margin-bottom: 20px;color: blueviolet;">Best Of Electerics</h2>
+            <div style="display: flex;flex-wrap: wrap;align-items: center;justify-content: space-evenly;margin: auto;">
+                {% for i in data%}
+                    <div class="col-lg-2 col-sm-12 col-12 col-md-5">
+                        <a href="{{url_for('Component')}}">
+                        <div class="card p-5 Electerics mx-2" style="height:320px;">
+                        <div style="text-align: center;">
+                            <img src="{{i.image}}" style="width:100%;height:170px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <p class="mt-3" style="font-size: 15px;font-weight: 600;height:20px;color: blueviolet;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif">{{i.model}}</p>
+                            <h5 style="color: black;font-weight:700;margin: 0px;color:green;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;font-size: 15px;">{{i.shop}}</h5>
+                        </div>
+                        </div>
+                    </a>
+                    </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 3 -->
+    <section class="my-5">
+        <div class="containers card p-3">
+            <div class="col-12 col-sm-12 col-lg-12 col-md-12 text">
+                <h2 style="font-weight: 800;font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;margin-bottom: 20px;color:blue;">Beauty,Food,Toys & More</h2>
+            <div style="display: flex;flex-wrap: wrap;align-items: center;justify-content: space-evenly;margin: auto;">
+                {% for i in dataa%}
+                    <div class="col-lg-2 col-sm-12 col-12 col-md-5">
+                        <div class="card p-5 Electerics mx-2" style="height:320px;">
+                        <div style="text-align: center;">
+                            <img src="{{i.image}}" style="width:100%;height:170px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <p class="mt-3" style="font-size: 15px;font-weight:700;height:20px;color: blue;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif">{{i.model}}</p>
+                            <h5 style="color: black;font-weight:700;margin: 0px;color: green;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;font-size: 15px;">{{i.shop}}</h5>
+                        </div>
+                        </div>
+                    </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 -->
+    <section class="my-5">
+        <div class="containers card p-3">
+            <div class="col-12 col-sm-12 col-lg-12 col-md-12 text">
+                <h2 style="font-weight: 800;font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;margin-bottom: 20px;color:red;">Home & Kitchen Essentials</h2>
+            <div style="display: flex;flex-wrap: wrap;align-items: center;justify-content: space-evenly;margin: auto;">
+                {% for i in dataaa%}
+                    <div class="col-lg-2 col-sm-12 col-12 col-md-5">
+                        <div class="card p-5 Electerics mx-2" style="height:320px;">
+                        <div style="text-align: center;">
+                            <img src="{{i.image}}" style="width:100%;height:170px;">
+                        </div>
+                        <div style="text-align: center;">
+                            <p class="mt-3" style="font-size: 15px;font-weight: 600;height:20px;color: red;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif">{{i.model}}</p>
+                            <h5 style="color: black;font-weight:700;margin: 0px;color: green;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;font-size: 15px;">{{i.shop}}</h5>
+                        </div>
+                        </div>
+                    </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- section 5 -->
+    <section>
+        <div class="containers card p-3">
+            <div class="col-lg-12">
+                <h2 class="text" style="font-weight: 800;font-family: inter_semi_bold,fallback-inter_semi_bold,Arial,sans-serif;margin-bottom: 20px;color:crimson;">End Of Season Bestsellers</h2>
+                <div class="col-lg-12 col-12 col-sm-12 col-md-12" style="display: flex;align-items: center;justify-content: space-evenly;flex-wrap: wrap;">
+                    <div class="col-lg-6 col-12 col-sm-12 col-md-12">
+                        <div style="display: flex;align-items: center;justify-content:space-evenly;flex-wrap: wrap;">
+                            {%for i in value%}
+                            <div class="col-lg-6 my-3 col-12 col-sm-12 col-md-6">
+                                <div class="card p-5 Electerics mx-2" style="height:320px;">
+                                <div style="text-align: center;">
+                                    <img src="{{i.image}}" style="width:100%;height:170px;">
+                                </div>
+                                <div style="text-align: center;">
+                                    <p class="mt-3 mb-2" style="font-size: 15px;font-weight: 600;;color: crimson;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif">{{i.model}}</p>
+                                    <h5 style="color: black;font-weight:700;margin: 0px;color: green;font-family: inter_regular,fallback-inter_regular,Arial,sans-serif;font-size: 15px;">{{i.shop}}</h5>
+                                </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div  class="col-lg-6 col-12 col-sm-12 col-md-12">
+                        <div class="col-lg-12 col-12 col-sm-12 col-md-12">
+                             <img src="https://rukminim2.flixcart.com/www/530/750/promos/22/05/2023/44d98c6b-16de-4759-a3c4-9d6412ad8bfa.jpg?q=80" width="100%" height="670px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark p-5 mt-5"> 
+        <div class="containers bg-dark">
+            <div class="col-12 col-lg-12 col-sm-12 col-md-12">
+                <div style="display: flex;flex-wrap: wrap;">
+                    <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size:15px;height:20px;" class="footer-size">HOME</h5></li>  
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">About Us</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Contact US</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Careers</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Flipkard Stories</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Press</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Corporate Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">GROUP COMPANIES</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Myntra</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Flipkard Wholesale</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cleartrip</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shopsy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">HELP</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shipping</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Payments</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cancellation & Returns</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Report Infringement</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">CONSUMER POLICY</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shipping</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Payments</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cancellation & Returns</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Report Infringement</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div style="display: flex;flex-wrap: wrap;">
+                            <div  class="col-12 col-md-6">
+                                <ul>
+                                    <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">MAIL US:</h5></li>
+                                    <li><p style="color: white;font-size:13px;line-height:18px;font-weight: 600;" class="footer-content">Flipkarc Internet Private Limaited,Buliding Alyssa,Begonia & Clove Road,Devarabeesanahali Bengalur,560103,Karnataka,india</p></li>
+                                </ul>
+                                <ul >
+                                    <li><h5 style="color: white;text-align:start;font-size: 15px;" class="footer-size">Social:</h5></li>
+                                </ul>
+                            </div>
+                            <ul class="col-12 col-md-6"> 
+                                <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size"> OFFICE ADDRESS:</h5></li>
+                                <li><p style="color: white;font-size:13px;line-height:18px;font-weight: 600;" class="footer-content">Flipkarc Internet Private Limaited,Buliding Alyssa,Begonia &Clove Road,Devarabeesanahali Bengalur,560103,Karnataka,india CIN:U51109KA2012PTC066107 Telephone: <span style="color: blue;font-weight: 800;">044*45614700</span></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="static/responsive.css"> -->
+    <title>Home</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+  </head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="search">
+  <div class="container-fluid">
+<div class="col-lg-12 col-12 col-sm-12 col-md-12">
+<div class="d-flex align-items-center justify-content-space-between">
+<div class="col-lg-2">
+    <a class="navbar-brand" href="#"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" width="90%"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+<div class="col-lg-10">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div style="display: flex;align-items: center;justify-content: space-around;"  class="col-lg-12">
+    <div class="col-lg-8">
+        <form class="d-flex" role="search" style="margin-left:10px;">
+            <input class="form-control me-2" type="search" placeholder="Search The Protect,Brands And More" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"  style="margin-left:10px;">Search</button>
+          </form>
+    </div>
+    <div class="col-lg-4">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color: black;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu" style="text-align: center;">
+              <li><a class="card mb-3 mt-3" style="background-color: blue;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Signup')}}">SignUp</a></li>
+              <li><a class="card mb-3" style="background-color:blueviolet;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Login')}}">Login</a></li>
+              <li><a class="card mb-3" style="background-color:red;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Logout')}}">Logout</a></li>
+            </ul>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active"  aria-current="page" style="color: black;" href="{{url_for('Card')}}">Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: black;">Become Seller</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- mobileview -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="display: none;" id="searchon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" width="90%"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: black;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" style="text-align: center;height:185px;width:200px;">
+            <li><a class="card mb-3 mt-3" style="background-color: blue;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Signup')}}">SignUp</a></li>
+            <li><a class="card mb-3" style="background-color:blueviolet;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Login')}}">Login</a></li>
+            <li><a class="card mb-3" style="background-color:red;color: white;display: inline-block;padding:5px 8px;font-weight: 800;border-radius: 5px;width:100px;" href="{{url_for('Logout')}}">Logout</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" style="color: black;">Card</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: black;">Become Seller</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search The Protect" aria-label="Search">
+        <button class="btn btn-outline-success" style="margin-left: 5px;" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

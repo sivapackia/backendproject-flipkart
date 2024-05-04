@@ -1,0 +1,86 @@
+@media(min-width:577px) and (max-width:992px){
+    a{
+     text-decoration: none;
+    }
+    #search{
+     display:none;
+    }
+    #searchon{
+       display: block !important;
+    }
+    .Electerics{
+     height: 330px !important;
+     margin-bottom:20px;
+    }
+    .Create{
+     font-size: 13px !important;
+    }
+    .Createheight{
+     height: 300px!important;
+    }
+    .kannan{
+       height:700px!important;
+    }
+    .text{
+     text-align: center;
+    }
+    .com_sec-1{
+     display: none !important;
+    }
+    .img-add{
+       width:20% !important;
+     }
+     .margin-img{
+       margin: 5px !important;
+      }
+ 
+ }
+ 
+ @media(max-width:576px){
+     a{
+         text-decoration: none;
+     }
+     #search{
+         display:none;
+        }
+     #searchon{
+         display: block !important ;
+     }
+     .Electerics{
+         height:330px !important;
+         margin-bottom:10px;
+        }
+        .Create{
+         font-size: 13px !important;
+        }
+        .Createheight{
+         height: 300px!important;
+        }
+        .text{
+         text-align: center;
+        }
+ 
+        .footer-size{
+         font-size:13px !important;
+         line-height: 20px !important;
+         height:30px !important;
+        }
+        .footer-content{
+         font-size: 10px !important;
+        }
+        .com_sec-1{
+         display: none !important;
+        }
+        .add-size{
+          font-size: 15px !important;
+        }
+        .add_button{
+          width: 100% !important;
+        }
+        .img-add{
+          width: 30% !important;
+        }
+        .margin-img{
+         margin: 5px !important;
+        }
+     }

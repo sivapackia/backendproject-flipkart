@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Component</title>
+    <style>
+        a{
+            text-decoration: none;
+            font-weight: 700;
+        }
+        li{
+            list-style-type: none;
+        }
+        .containers{
+            width:98%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body style="background-color: #8080802b;">
+    {% extends "Navbar.html" %}
+    {% block content%}
+    <section>
+    <div class="mt-3 containers">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div style="display: flex;justify-content:space-evenly;flex-wrap: wrap;">
+            <div class="col-lg-2 com_sec-1">
+                <div class="col-lg-12 card">
+                    <div>
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/400/400/image/50515053d0abbf53.jpg?q=50" width="100%">
+                    </div>
+                    <div style="text-align: center;">
+                        <h5 style="font-weight: 800;">Latest Launched Printers</h5>
+                        <p style="font-weight: 500;color: gray;">sale is Live Just  <i style="margin-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>5,999</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 card mt-3">
+                    <div>
+                        <h5 style="font-weight: 800;padding: 20px 10px;border-bottom: 0.5px solid gray;">Filters</h5>
+                        <p style="font-weight: 500;padding: 10px 10px;">CATEGORIES</p>
+                        <p style="padding: 0px 10px;font-weight: 800;color: gray;font-size: 20px;"><i style="margin-right: 10px;" class="fa-solid fa-angle-left"></i>Computers</p>
+                        <p style="padding: 0px 10px;font-weight: 800;color: gray;font-size: 20px;"><i style="margin-right: 10px;" class="fa-solid fa-angle-left"></i>Computer Peripherals</p>
+                        <p style="padding: 0px 10px;font-weight: 800;color: gray;font-size: 20px;"><i style="margin-right: 10px;" class="fa-solid fa-angle-left"></i>Printers &  Links</p>
+                    </div>
+                    </div>
+                </div>
+                <div  class="col-lg-9 col-sm-12 col-12 col-md-12">
+                <div class="col-lg-12 card p-2"> 
+                    <div style="color: gray;">
+                       <span> <a href="#" style="color: gray;margin-left: 10px;">Home</a><i style="margin-left: 10px;" class="fa-solid fa-angle-right"></i></span>
+                       <span> <a href="#" style="color: gray;margin-left: 10px;">Computers</a><i style="margin-left: 10px;" class="fa-solid fa-angle-right"></i></span>
+                       <span> <a href="#" style="color: gray;margin-left: 10px;">Computer Peripherals</a><i style="margin-left: 10px;" class="fa-solid fa-angle-right"></i></span>
+                       <span><a href="#" style="color: gray;margin-left: 10px;">Printers</a><i style="margin-left: 10px;" class="fa-solid fa-angle-right"></i></span> 
+                    </div>
+                    <div>
+                        <p class="p-2" style="color:gray">
+                            A printer is an important electronic device and a vital component of a computer. For the uninitiated, a printing machine is equipment that transfers information available in text and image form to paper. It converts the soft copy of a document to a hard copy. It is an external device that is connected to the computer to get the required printouts. You can print anything and everything through it, be it an image, text, charts, graphs, or other data. With the advancement in technology, the device has evolved over time. Depending on the technologies, these are of different types, including Inkjet, Laser, Ink Tank, etc. If you are searching for a printer online, there is a huge variety available to choose from. Complete your assignments in no time with the help of printouts, or finish off your kid’s school project with fabulous and life-like images printed on it. Check brands such as HP, Epson, Canon, Brother, Xerox, and more. It is portable and suitable for both the office and the home. All these devices come in a wide range of colours, shapes, and sizes and have a dynamic appeal. Just apply the various filters like refilling type, functions, interface, and others before you buy the best printer for yourself from the comfort of your home. 
+                            Popular Searches- <span style="color: blue;">Computer Accessories </span>  
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-4">
+                    <div class="d-flex align-items-center justify-content-evenly" style="flex-wrap: wrap;">
+                        {% for i in data %}
+                        <div class="col-lg-3 col-sm-12 col-12 col-md-6">
+                        <a href="{{url_for('Addtocard',id=i.id)}}" class="card margin-img m-1" style="display: inline-block;">
+                        <div class="col-lg-12 col-sm-12 col-12 col-md-12">
+                            <div class="pt-4 px-4" style="text-align: end;">
+                                <i class="fa-solid fa-heart" style="font-size: 20px;color: gray;"></i>
+                            </div>
+                            <div class="col-lg-12 p-5" style="height:220px;">
+                                <img src="{{i.product_img}}" width="100%" style="text-align: center;">
+                            </div>
+                            <div class="pt-5 pb-4 px-3" style="height: 280px;">
+                                <p style="color: gray;font-weight: 800;">Sponsored</p>
+                                <h6 style="line-height: 25px;font-weight:600;height: 50px;">
+                                 {{i.product_company}}
+                                </h6>
+                                <div style="display: flex;justify-content: space-between;align-items: center;">
+                                    <span style="padding:5px 10px;display: inline-block;background-color: #388e3c;color: white;border-radius: 5px;">{{i.rateing}} <i class="fa-solid fa-star"></i></span>
+                                    <span style="font-size: 20px;font-weight: 800;color: gray;">({{i.view}})</span>
+                                    <img src="{{i.flip_img}}" width="40%">
+                                </div>
+                                <div style="display: flex;justify-content: space-between;align-items: center;margin-top: 18px;">
+                                    <h3><i class="fa-solid fa-indian-rupee-sign" style="margin-right: 10px;"></i>{{i.offer_prize}}</h3>
+                                    <h5><i style="margin-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i><del>{{i.prize}}</del></h5>
+                                    <h5 style="color: green;">{{i.offer}}% off</h5>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                        {% endfor %}
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <footer class="bg-dark p-5 mt-5"> 
+        <div class="containers bg-dark">
+            <div class="col-12 col-lg-12 col-sm-12 col-md-12">
+                <div style="display: flex;flex-wrap: wrap;">
+                    <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size:15px;height:20px;" class="footer-size">HOME</h5></li>  
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">About Us</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Contact US</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Careers</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Flipkard Stories</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Press</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Corporate Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-8 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">GROUP COMPANIES</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Myntra</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Flipkard Wholesale</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cleartrip</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shopsy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">HELP</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shipping</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Payments</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cancellation & Returns</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Report Infringement</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <ul>
+                            <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">CONSUMER POLICY</h5></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Shipping</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Payments</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Cancellation & Returns</a></li>
+                            <li><a href="#" style="color: white;font-size: 13px;" class="footer-content">Report Infringement</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div style="display: flex;flex-wrap: wrap;">
+                            <div  class="col-12 col-md-6">
+                                <ul>
+                                    <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size">MAIL US:</h5></li>
+                                    <li><p style="color: white;font-size:13px;line-height:18px;font-weight: 600;" class="footer-content">Flipkarc Internet Private Limaited,Buliding Alyssa,Begonia & Clove Road,Devarabeesanahali Bengalur,560103,Karnataka,india</p></li>
+                                </ul>
+                                <ul >
+                                    <li><h5 style="color: white;text-align:start;font-size: 15px;" class="footer-size">Social:</h5></li>
+                                </ul>
+                            </div>
+                            <ul class="col-12 col-md-6"> 
+                                <li><h5 style="color: white;text-align:start;font-size: 15px;height:20px;" class="footer-size"> OFFICE ADDRESS:</h5></li>
+                                <li><p style="color: white;font-size:13px;line-height:18px;font-weight: 600;" class="footer-content">Flipkarc Internet Private Limaited,Buliding Alyssa,Begonia &Clove Road,Devarabeesanahali Bengalur,560103,Karnataka,india CIN:U51109KA2012PTC066107 Telephone: <span style="color: blue;font-weight: 800;">044*45614700</span></p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    
+</body>
+</html>
